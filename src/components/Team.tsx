@@ -1,35 +1,50 @@
 import { motion } from "framer-motion";
 
+import shivamImage from "@/assets/team/shivam-singh.jpg";
+import shubhImage from "@/assets/team/shubh-srivastava.jpg";
+import abdulImage from "@/assets/team/abdul-mueez.jpg";
+import vanshajImage from "@/assets/team/vanshaj-chandel.jpg";
+import raghuvanshImage from "@/assets/team/raghuvansh-chandel.jpg";
+import aqiqImage from "@/assets/team/aqiq-ali.jpg";
+import kartikeyImage from "@/assets/team/kartikey-kumar.jpg";
+
 const teamMembers = [
   {
     name: "Dr. Shivam Singh",
     role: "Founder & Art Director",
     subtitle: "Founder of Shivamorphosis",
+    image: shivamImage,
   },
   {
     name: "Shubh Srivastava",
     role: "CEO",
+    image: shubhImage,
   },
   {
     name: "Abdul Mueez",
     role: "Managing Director",
+    image: abdulImage,
   },
   {
     name: "Vanshaj Singh Chandel",
     role: "Production Executive",
+    image: vanshajImage,
   },
   {
     name: "Raghuvansh Singh Chandel",
     role: "Chief Growth & Marketing Strategist",
+    image: raghuvanshImage,
   },
   {
     name: "Aqiq Ali",
     role: "Production Manager",
+    image: aqiqImage,
   },
   {
     name: "Kartikey Kumar",
     role: "CTO",
     subtitle: "IIT Roorkee, Batch of 2024",
+    image: kartikeyImage,
   },
 ];
 
@@ -65,25 +80,33 @@ const Team = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-charcoal-light rounded-xl p-6 border border-border hover:border-gold/30 transition-all duration-300 h-full">
-                {/* Placeholder Portrait */}
-                <div className="w-20 h-20 mx-auto mb-5 rounded-full bg-gradient-to-br from-wine/30 to-gold/30 flex items-center justify-center">
-                  <span className="font-display text-2xl text-gold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+              <div className="relative rounded-xl overflow-hidden border border-border hover:border-gold/30 transition-all duration-300">
+                {/* Full Image */}
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-
-                <h3 className="font-display text-xl font-semibold text-champagne text-center mb-1">
-                  {member.name}
-                </h3>
-                <p className="font-body text-gold text-center mb-1">
-                  {member.role}
-                </p>
-                {member.subtitle && (
-                  <p className="font-body text-sm text-muted-foreground text-center">
-                    {member.subtitle}
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
+                
+                {/* Content Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-display text-xl font-semibold text-champagne mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="font-body text-gold text-sm mb-1">
+                    {member.role}
                   </p>
-                )}
+                  {member.subtitle && (
+                    <p className="font-body text-xs text-muted-foreground">
+                      {member.subtitle}
+                    </p>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
