@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import djNightImage from "@/assets/dj-night.jpg";
 import fireShowImage from "@/assets/fire-show.jpg";
+import jaisalmerImage from "@/assets/jaisalmer-night.jpg";
+import culturalImage from "@/assets/cultural-dance.jpg";
 
 const EveningExperiences = () => {
   return (
@@ -47,16 +49,23 @@ const EveningExperiences = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-charcoal-light rounded-xl p-8 border border-border hover:border-gold/30 transition-colors group"
+              className="bg-charcoal-light rounded-xl overflow-hidden border border-border hover:border-gold/30 transition-colors group"
             >
-              <p className="font-body text-gold text-sm tracking-widest uppercase mb-2">5:00 – 7:30 PM</p>
-              <h3 className="font-display text-2xl md:text-3xl font-semibold text-champagne mb-4">
-                Jaisalmer Night
-              </h3>
-              <p className="font-body text-foreground/80 leading-relaxed">
-                Immerse yourself in the royal desert-inspired décor with warm golden hues, 
-                evoking the majestic beauty of Rajasthan's golden city.
-              </p>
+              <img
+                src={jaisalmerImage}
+                alt="Jaisalmer Night"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-8">
+                <p className="font-body text-gold text-sm tracking-widest uppercase mb-2">5:00 – 7:30 PM</p>
+                <h3 className="font-display text-2xl md:text-3xl font-semibold text-champagne mb-4">
+                  Jaisalmer Night
+                </h3>
+                <p className="font-body text-foreground/80 leading-relaxed">
+                  Immerse yourself in the royal desert-inspired décor with warm golden hues, 
+                  evoking the majestic beauty of Rajasthan's golden city.
+                </p>
+              </div>
             </motion.div>
 
             {/* DJ Night - Ravetek */}
@@ -111,16 +120,23 @@ const EveningExperiences = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-charcoal-light rounded-xl p-8 border border-border hover:border-gold/30 transition-colors"
+              className="bg-charcoal-light rounded-xl overflow-hidden border border-border hover:border-gold/30 transition-colors"
             >
-              <p className="font-body text-gold text-sm tracking-widest uppercase mb-2">5:00 – 7:00 PM</p>
-              <h3 className="font-display text-2xl md:text-3xl font-semibold text-champagne mb-4">
-                Cultural Performances
-              </h3>
-              <p className="font-body text-foreground/80 leading-relaxed">
-                Witness captivating cultural dance performances and golden-era melodies 
-                that transport you to a time of timeless elegance and romance.
-              </p>
+              <img
+                src={culturalImage}
+                alt="Cultural Performances"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-8">
+                <p className="font-body text-gold text-sm tracking-widest uppercase mb-2">5:00 – 7:00 PM</p>
+                <h3 className="font-display text-2xl md:text-3xl font-semibold text-champagne mb-4">
+                  Cultural Performances
+                </h3>
+                <p className="font-body text-foreground/80 leading-relaxed">
+                  Witness captivating cultural dance performances and golden-era melodies 
+                  that transport you to a time of timeless elegance and romance.
+                </p>
+              </div>
             </motion.div>
 
             {/* Grand Night Experience */}
