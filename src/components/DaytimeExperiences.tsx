@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
-import qawwaliImage from "@/assets/qawwali.jpg";
+import { Palette, PenTool, Droplets, User, Pencil, Type, Sparkles } from "lucide-react";
+import qawwaliImage from "@/assets/qawwali.png";
 import artWorkshopImage from "@/assets/art-workshop.jpg";
 
 const workshops = [
-  "Clay Modelling",
-  "Craft Making",
-  "Pottery Making",
-  "Watercolour Painting",
-  "Portrait Making",
-  "Sketching",
-  "Calligraphy",
-  "Live Conceptual Art",
+  { name: "Clay Modelling", icon: Sparkles, description: "Shape your imagination with hands-on clay sculpting" },
+  { name: "Craft Making", icon: Sparkles, description: "Create beautiful handmade crafts and decorations" },
+  { name: "Pottery Making", icon: Palette, description: "Learn the ancient art of pottery on the wheel" },
+  { name: "Watercolour Painting", icon: Droplets, description: "Express yourself through fluid watercolors" },
+  { name: "Portrait Making", icon: User, description: "Capture faces and emotions on canvas" },
+  { name: "Sketching", icon: Pencil, description: "Master the fundamentals of drawing" },
+  { name: "Calligraphy", icon: Type, description: "The elegant art of beautiful writing" },
+  { name: "Live Conceptual Art", icon: PenTool, description: "Watch artists create live masterpieces" },
 ];
 
 const DaytimeExperiences = () => {
@@ -33,7 +34,7 @@ const DaytimeExperiences = () => {
         </motion.div>
 
         {/* Qawwali Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -45,7 +46,7 @@ const DaytimeExperiences = () => {
             <img
               src={qawwaliImage}
               alt="Live Qawwali Performance"
-              className="relative rounded-lg w-full aspect-square object-cover"
+              className="relative rounded-lg w-full aspect-video object-cover"
             />
           </motion.div>
 
@@ -71,56 +72,55 @@ const DaytimeExperiences = () => {
         </div>
 
         {/* Art Workshops Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1"
-          >
-            <p className="font-body text-wine-light text-sm mb-3 tracking-widest uppercase">
-              Hosted by Shivamorphosis
-            </p>
-            <h3 className="font-display text-3xl md:text-4xl font-semibold text-gold mb-6">
-              Art Workshops
-            </h3>
-            <p className="font-body text-lg text-foreground/90 leading-relaxed mb-8">
-              Unleash your creativity through a diverse range of hands-on art workshops, 
-              expertly curated and hosted by Shivamorphosis.
-            </p>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-12"
+        >
+          <p className="font-body text-wine-light text-sm mb-3 tracking-widest uppercase text-center">
+            Hosted by Shivamorphosis
+          </p>
+          <h3 className="font-display text-3xl md:text-4xl font-semibold text-gold mb-4 text-center">
+            Art Workshops
+          </h3>
+          <p className="font-body text-lg text-foreground/90 leading-relaxed mb-12 text-center max-w-2xl mx-auto">
+            Unleash your creativity through a diverse range of hands-on art workshops, 
+            expertly curated and hosted by Shivamorphosis.
+          </p>
+        </motion.div>
 
-            <div className="grid grid-cols-2 gap-3">
-              {workshops.map((workshop, index) => (
-                <motion.div
-                  key={workshop}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-1.5 h-1.5 bg-gold rotate-45" />
-                  <span className="font-body text-foreground/80">{workshop}</span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative group order-1 lg:order-2"
-          >
-            <div className="absolute -inset-2 bg-gradient-to-r from-gold/20 to-wine/20 rounded-lg blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
-            <img
-              src={artWorkshopImage}
-              alt="Art Workshops"
-              className="relative rounded-lg w-full aspect-square object-cover"
-            />
-          </motion.div>
+        {/* Workshop Cards Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {workshops.map((workshop, index) => {
+            const IconComponent = workshop.icon;
+            return (
+              <motion.div
+                key={workshop.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-charcoal-light rounded-xl p-6 border border-border hover:border-gold/40 transition-all duration-300 h-full flex flex-col">
+                  {/* Icon */}
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-wine/20 to-gold/20 flex items-center justify-center mb-4 group-hover:from-wine/30 group-hover:to-gold/30 transition-all">
+                    <IconComponent className="w-6 h-6 text-gold" />
+                  </div>
+                  
+                  {/* Content */}
+                  <h4 className="font-display text-lg font-semibold text-champagne mb-2">
+                    {workshop.name}
+                  </h4>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1">
+                    {workshop.description}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
