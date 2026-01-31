@@ -41,7 +41,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="font-body text-sm text-muted-foreground">
-            © 2025 Love Ambrosia. All rights reserved.
+            © 2025 Shivamorphosis Pvt Ltd. All rights reserved.
           </p>
         </div>
       </div>

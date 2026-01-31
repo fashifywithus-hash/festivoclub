@@ -6,6 +6,7 @@ import EveningExperiences from "@/components/EveningExperiences";
 import Team from "@/components/Team";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MusicButton from "@/components/MusicButton";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <EveningExperiences />
       <Team />
       <Footer />
+      <MusicButton />
       <WhatsAppButton />
     </div>
   );

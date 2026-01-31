@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import djNightImage from "@/assets/dj-night.jpg";
-import fireShowImage from "@/assets/fire-show.jpg";
-import jaisalmerImage from "@/assets/jaisalmer-night.jpg";
+import { Instagram } from "lucide-react";
+import djNightImage from "@/assets/ravetek.webp";
+import fireShowImage from "@/assets/fire.webp";
+import jaisalmerImage from "@/assets/jaisalmer.webp";
 import culturalImage from "@/assets/cultural-dance.jpg";
 
 const EveningExperiences = () => {
@@ -82,11 +83,22 @@ const EveningExperiences = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-8">
-                <p className="font-body text-wine-light text-sm tracking-widest uppercase mb-2">7:30 – 10:00 PM</p>
+                <p className="font-body text-gold text-sm tracking-widest uppercase mb-2">7:30 – 10:00 PM</p>
                 <h3 className="font-display text-2xl md:text-3xl font-semibold text-champagne mb-2">
                   DJ Night
                 </h3>
-                <p className="font-body text-gold text-lg mb-3">DJ Ravetek</p>
+                <div className="flex items-center gap-2 mb-3">
+                  <p className="font-body text-gold text-lg">DJ Ravetek</p>
+                  <a
+                    href="https://instagram.com/ravetek"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold hover:text-gold-light transition-colors"
+                    aria-label="DJ Ravetek on Instagram"
+                  >
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                </div>
                 <a
                   href="https://instagram.com/ravetek"
                   target="_blank"
@@ -108,7 +120,7 @@ const EveningExperiences = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="text-center mb-12">
-            <span className="inline-block px-6 py-2 border border-wine/50 rounded-full font-display text-wine-light text-lg">
+            <span className="inline-block px-6 py-2 border border-gold/50 rounded-full font-display text-gold text-lg">
               14th February — Valentine's Day
             </span>
           </div>
@@ -153,7 +165,7 @@ const EveningExperiences = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-8">
-                <p className="font-body text-wine-light text-sm tracking-widest uppercase mb-2">7:30 – 10:00 PM</p>
+                <p className="font-body text-gold text-sm tracking-widest uppercase mb-2">7:30 – 10:00 PM</p>
                 <h3 className="font-display text-2xl md:text-3xl font-semibold text-champagne mb-4">
                   Grand Night Experience
                 </h3>

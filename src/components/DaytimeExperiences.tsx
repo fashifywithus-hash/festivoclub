@@ -1,17 +1,15 @@
 import { motion } from "framer-motion";
-import { Palette, PenTool, Droplets, User, Pencil, Type, Sparkles } from "lucide-react";
 import qawwaliImage from "@/assets/qawwali.png";
-import artWorkshopImage from "@/assets/art-workshop.jpg";
 
 const workshops = [
-  { name: "Clay Modelling", icon: Sparkles, description: "Shape your imagination with hands-on clay sculpting" },
-  { name: "Craft Making", icon: Sparkles, description: "Create beautiful handmade crafts and decorations" },
-  { name: "Pottery Making", icon: Palette, description: "Learn the ancient art of pottery on the wheel" },
-  { name: "Watercolour Painting", icon: Droplets, description: "Express yourself through fluid watercolors" },
-  { name: "Portrait Making", icon: User, description: "Capture faces and emotions on canvas" },
-  { name: "Sketching", icon: Pencil, description: "Master the fundamentals of drawing" },
-  { name: "Calligraphy", icon: Type, description: "The elegant art of beautiful writing" },
-  { name: "Live Conceptual Art", icon: PenTool, description: "Watch artists create live masterpieces" },
+  { name: "Clay Modelling", image: "/backend/images/clay_modelling.jpeg", description: "Shape your imagination with hands-on clay sculpting" },
+  { name: "Craft Making", image: "/backend/images/craft_making.jpeg", description: "Create beautiful handmade crafts and decorations" },
+  { name: "Pottery Making", image: "/backend/images/pottery_making2.webp", description: "Learn the ancient art of pottery on the wheel" },
+  { name: "Watercolour Painting", image: "/backend/images/water_colour.webp", description: "Express yourself through fluid watercolors" },
+  { name: "Portrait Making", image: "/backend/images/portrait_making.webp", description: "Capture faces and emotions on canvas" },
+  { name: "Sketching", image: "/backend/images/sketching.webp", description: "Master the fundamentals of drawing" },
+  { name: "Calligraphy", image: "/backend/images/calligraphy.webp", description: "The elegant art of beautiful writing" },
+  { name: "Live Conceptual Art", image: "/backend/images/live_concept.jpeg", description: "Watch artists create live masterpieces" },
 ];
 
 const DaytimeExperiences = () => {
@@ -94,7 +92,6 @@ const DaytimeExperiences = () => {
         {/* Workshop Cards Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {workshops.map((workshop, index) => {
-            const IconComponent = workshop.icon;
             return (
               <motion.div
                 key={workshop.name}
@@ -104,19 +101,25 @@ const DaytimeExperiences = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="bg-charcoal-light rounded-xl p-6 border border-border hover:border-gold/40 transition-all duration-300 h-full flex flex-col">
-                  {/* Icon */}
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-wine/20 to-gold/20 flex items-center justify-center mb-4 group-hover:from-wine/30 group-hover:to-gold/30 transition-all">
-                    <IconComponent className="w-6 h-6 text-gold" />
-                  </div>
+                <div className="relative rounded-xl overflow-hidden border border-border hover:border-gold/40 transition-all duration-300 h-full flex flex-col aspect-[3/4]">
+                  {/* Background Image */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                    style={{ backgroundImage: `url(${workshop.image})` }}
+                  />
+                  
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/40" />
                   
                   {/* Content */}
-                  <h4 className="font-display text-lg font-semibold text-champagne mb-2">
-                    {workshop.name}
-                  </h4>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1">
-                    {workshop.description}
-                  </p>
+                  <div className="relative z-10 flex flex-col justify-end p-6 h-full">
+                    <h4 className="font-display text-lg font-semibold text-champagne mb-2">
+                      {workshop.name}
+                    </h4>
+                    <p className="font-body text-sm text-foreground/90 leading-relaxed">
+                      {workshop.description}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             );

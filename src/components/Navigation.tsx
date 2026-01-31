@@ -32,11 +32,26 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="font-display text-xl font-semibold">
-            <span className="text-love">Love</span>{" "}
-            <span className="text-ambrosia">Ambrosia</span>
-          </a>
+          {/* Organizer logos + Logo */}
+          <div className="flex items-center gap-3">
+            {/* Two organizer logos */}
+            <div className="flex items-center gap-2 shrink-0">
+              <img
+                src="/backend/images/shivamorphosis.jpg"
+                alt="Organizer"
+                className="w-9 h-9 rounded-full object-cover border border-gold/40 bg-muted"
+              />
+              <img
+                src="/backend/images/festivo.jpeg"
+                alt="Organizer"
+                className="w-9 h-9 rounded-full object-cover border border-gold/40 bg-muted"
+              />
+            </div>
+            <a href="#" className="font-display text-xl font-semibold">
+              <span className="text-love">Love</span>{" "}
+              <span className="text-ambrosia">Ambrosia</span>
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
