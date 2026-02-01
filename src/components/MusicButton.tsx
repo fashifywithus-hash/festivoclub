@@ -7,7 +7,7 @@ const MusicButton = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio("/song.mp3");
+    audioRef.current = new Audio("/festivoclub/song.mp3");
     return () => {
       if (audioRef.current) {
         audioRef.current.pause();
