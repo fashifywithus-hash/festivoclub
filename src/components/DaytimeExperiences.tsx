@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import qawwaliImage from "@/assets/qawwali.png";
 
 const workshops = [
-  { name: "Clay Modelling", image: "/backend/images/clay_modelling.jpeg", description: "Shape your imagination with hands-on clay sculpting" },
-  { name: "Craft Making", image: "/backend/images/craft_making.jpeg", description: "Create beautiful handmade crafts and decorations" },
-  { name: "Pottery Making", image: "/backend/images/pottery_making2.webp", description: "Learn the ancient art of pottery on the wheel" },
-  { name: "Watercolour Painting", image: "/backend/images/water_colour.webp", description: "Express yourself through fluid watercolors" },
-  { name: "Portrait Making", image: "/backend/images/portrait_making.webp", description: "Capture faces and emotions on canvas" },
-  { name: "Sketching", image: "/backend/images/sketching.webp", description: "Master the fundamentals of drawing" },
-  { name: "Calligraphy", image: "/backend/images/calligraphy.webp", description: "The elegant art of beautiful writing" },
-  { name: "Live Conceptual Art", image: "/backend/images/live_concept.jpeg", description: "Watch artists create live masterpieces" },
+  { name: "Clay Modelling", image: "/festivoclub/images/clay_modelling.jpeg", description: "Shape your imagination with hands-on clay sculpting" },
+  { name: "Craft Making", image: "/festivoclub/images/craft_making.jpeg", description: "Create beautiful handmade crafts and decorations" },
+  { name: "Pottery Making", image: "/festivoclub/images/pottery_making2.webp", description: "Learn the ancient art of pottery on the wheel" },
+  { name: "Watercolour Painting", image: "/festivoclub/images/water_colour.webp", description: "Express yourself through fluid watercolors" },
+  { name: "Portrait Making", image: "/festivoclub/images/portrait_making.webp", description: "Capture faces and emotions on canvas" },
+  { name: "Sketching", image: "/festivoclub/images/sketching.webp", description: "Master the fundamentals of drawing" },
+  { name: "Calligraphy", image: "/festivoclub/images/calligraphy.webp", description: "The elegant art of beautiful writing" },
+  { name: "Live Conceptual Art", image: "/festivoclub/images/live_concept.jpeg", description: "Watch artists create live masterpieces" },
 ];
 
 const DaytimeExperiences = () => {

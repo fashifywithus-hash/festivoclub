@@ -37,12 +37,12 @@ const Navigation = () => {
             {/* Two organizer logos */}
             <div className="flex items-center gap-2 shrink-0">
               <img
-                src="/backend/images/shivamorphosis.jpg"
+                src="/festivoclub/images/shivamorphosis.jpg"
                 alt="Organizer"
                 className="w-9 h-9 rounded-full object-cover border border-gold/40 bg-muted"
               />
               <img
-                src="/backend/images/festivo.jpeg"
+                src="/festivoclub/images/festivo.jpeg"
                 alt="Organizer"
                 className="w-9 h-9 rounded-full object-cover border border-gold/40 bg-muted"
               />
