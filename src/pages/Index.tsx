@@ -10,7 +10,7 @@ import MusicButton from "@/components/MusicButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden min-w-0">
       <Navigation />
       <Hero />
       <About />

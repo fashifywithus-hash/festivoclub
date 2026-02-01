@@ -15,7 +15,7 @@ const workshops = [
 const DaytimeExperiences = () => {
   return (
     <section id="daytime" className="py-24 bg-charcoal relative">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -25,7 +25,7 @@ const DaytimeExperiences = () => {
           className="text-center mb-16"
         >
           <p className="font-body text-gold text-lg mb-3 tracking-widest uppercase">11:30 AM – 5:00 PM</p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4">
             Daytime Experiences
           </h2>
           <div className="divider-gold w-32 mx-auto mt-6" />

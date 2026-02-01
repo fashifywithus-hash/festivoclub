@@ -37,16 +37,16 @@ const teamMembers = [
 const Team = () => {
   return (
     <section id="team" className="py-24 bg-gradient-dark relative">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">
             The Faces Behind
           </h2>
           <p className="font-display text-2xl md:text-3xl text-gold">

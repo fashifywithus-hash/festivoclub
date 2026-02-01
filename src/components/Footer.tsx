@@ -3,7 +3,7 @@ import { Instagram } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="py-16 bg-charcoal border-t border-border">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col items-center text-center">
           {/* Logo */}
           <h3 className="font-display text-3xl font-semibold mb-2">

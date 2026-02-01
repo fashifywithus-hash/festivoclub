@@ -14,16 +14,16 @@ const EveningExperiences = () => {
         <div className="absolute bottom-20 right-10 w-48 h-48 border border-wine/30 rotate-12" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-20"
         >
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4">
             Evening & Night <span className="text-gold">Experiences</span>
           </h2>
           <div className="divider-gold w-32 mx-auto mt-6" />

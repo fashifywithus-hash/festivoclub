@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const Hero = () => {
           className="max-w-4xl mx-auto"
         >
           {/* Main Title */}
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-semibold mb-6 tracking-tight">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-semibold mb-4 md:mb-6 tracking-tight">
             <span className="text-love">Love</span>{" "}
             <span className="text-ambrosia">Ambrosia</span>
           </h1>
@@ -35,7 +35,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="font-body text-xl md:text-2xl text-champagne mb-4 tracking-wide"
+            className="font-body text-lg sm:text-xl md:text-2xl text-champagne mb-3 md:mb-4 tracking-wide"
           >
             India's First Paris-Inspired Art & Cultural Festival
           </motion.p>
@@ -45,7 +45,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="font-body text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+            className="font-body text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-1"
           >
             A luxurious celebration of art, culture, music, and romance inspired by Paris.
           </motion.p>
@@ -55,16 +55,16 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10 text-foreground/90"
+            className="flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-6 mb-8 md:mb-10 text-foreground/90"
           >
-            <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-gold" />
-              <span className="font-body text-lg">Lohiya Park, Gomti Nagar, Lucknow</span>
+            <div className="flex items-center gap-2 justify-center text-center">
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-gold shrink-0" />
+              <span className="font-body text-sm sm:text-base md:text-lg">Lohiya Park, Gomti Nagar, Lucknow</span>
             </div>
             <div className="hidden md:block w-px h-6 bg-gold/30" />
-            <div className="flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-gold" />
-              <span className="font-body text-lg">13–14 February</span>
+            <div className="flex items-center gap-2 justify-center">
+              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-gold shrink-0" />
+              <span className="font-body text-sm sm:text-base md:text-lg">13–14 February</span>
             </div>
           </motion.div>
 

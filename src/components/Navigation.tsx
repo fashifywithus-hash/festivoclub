@@ -30,7 +30,7 @@ const Navigation = () => {
         isScrolled ? "glass-dark py-3" : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 max-w-[100vw]">
         <div className="flex items-center justify-between">
           {/* Organizer logos + Logo */}
           <div className="flex items-center gap-3">
